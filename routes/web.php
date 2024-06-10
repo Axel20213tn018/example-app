@@ -28,14 +28,6 @@ Route::resource('cursos', CursoController::class);
 
 Route::view('nosotros', 'nosotros')->name('nosotros');
 
-// Route::get('contactanos', function () {
-//     Mail::to('20213tn018@utez.edu.mx')
-//         ->send(new ContactanosMailable);
-        
-//     return "Mensaje Enviado";
-
-// })->name('contactanos');
-
 Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
 
 Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos.store');
